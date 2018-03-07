@@ -4,9 +4,9 @@
 $x = "Ini Riset Saya<br>";
 //tipe data integer
 $angka = "1000";
-$angka2 = "100";
+$angka2 = 100;
 //tipe data float
-$angka3 = "2.8";
+$angka3 = 2.8;
 
 /*Mencetak Nilai*/
 //Operator Matematik
@@ -14,7 +14,8 @@ $angka3 = "2.8";
 echo "*Operator Matematik <br>";
 $hasil = $angka - $angka2;
 echo $hasil."<br>";
-echo "Hasil setelah increment = ". $hasil++;
+$angka++;
+echo $angka;
 //Metode Math
 // min max round
 echo "<br><br>*Metode Math <br>";
@@ -23,7 +24,7 @@ echo "Hasil setelah diround = ". round($angka3);
 // str_replace || str_repeat
 echo "<br><br>*Metode String <br>";
 echo "Text Asli : ". $x . "<br>";
-echo str_repeat(str_replace("Saya", "Kami", $x), 10);
+echo str_repeat(str_replace("Saya", "Kami", $x), 1);
 
 //Array
 echo "<br><br>*Array <br>";
@@ -32,7 +33,7 @@ $hewan = ['Anjing', 'Sapi', 'Kuda'];
 
 print_r($kandang);
 echo "<br>";
-echo $kandang[0];
+echo $kandang[2];
 
 //Metode Array
 echo "<br><br>*Metode Array <br>";
@@ -58,6 +59,7 @@ $data = array('Nama' => 'Fata Hasan',
 print_r(array_keys($data));
 echo "<br>";
 
+
 //Multi dimensi Array
 echo "<br><br>*Multi Dimensi Array <br>";
 $data = array(
@@ -65,6 +67,8 @@ $data = array(
             array(4,5,6),
             array(7,8,9)
         );
+echo $data[1][2];
+echo "<br>";
 for ($i=0; $i < 3; $i++) {
   for ($j=0; $j < 3; $j++) {
       echo $data[$i][$j];
