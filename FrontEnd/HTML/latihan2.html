@@ -31,6 +31,7 @@
 	</style>
 </head>
 <body>
+
 	<header>
 		<h1>Belajar Programming</h1>
 		<h2>bersama sekolah koding</h2>
@@ -42,25 +43,66 @@
 			<li><a href="#">Profil</a></li>
 			<li><a href="#">Kontak</a></li>
 		</ul>
+		<form>
+			<input type="search" name="search" placeholder="cari disini">
+			<input type="submit" name="submit" value="cari">
+		</form>
 	</nav>
 
 	<main>
-		<h1>Daftar Pelajaran</h1>
+		<article>
 
-		<div>
-			<h2>HTML</h2>
-			<p>membuat struktur website dengan HTML</p>
-		</div>
+			<h1>Daftar Pelajaran</h1>
+			<dialog open>
+				ini website tutorial ngoding
+			</dialog>
 
-		<div>
-			<h2>CSS</h2>
-			<p>Menghias website agar lebih cantik dengan css</p>
-		</div>
+			<section>
+				<figure>
+					<img src="assets/img/html.png" height="100" width="100">
+					<figcaption>HTML untuk pemula</figcaption>
+					<details>
+						<summary>
+							Info selengkapnya
+						</summary>
+						<p>HTML adalah kepanjangan dari Hypertext Markup Language dan merupakan salah satu bahasa yang paling banyak digunakan dalam mebuat halaman web.</p>
+						<fieldset>
+							<legend>Ini adalah video HTML5</legend>
+						<video height="300" width="700" controls autoplay">
+							<source src="assets/media/intro.mp4" type="video/mp4">
+							browser anda tidak mendukung
+						</video>
+						</fieldset>
+					</details>
+				</figure>
+			</section>
 
-		<div>
-			<h2>Javascript</h2>
-			<p>membuat website lebih interaktif dengan javascript</p>
-		</div>
+			<section>
+				<figure>
+					<img src="assets/img/css.png" height="100" width="120">
+					<figcaption>CSS untuk pemula</figcaption>			
+					<details>
+						<summary>
+							Info selengkapnya
+						</summary>
+						<p>Dalam bahasa bakunya, seperti di kutip dari wikipedia, CSS adalah “kumpulan kode yang digunakan untuk mendefenisikan desain dari bahasa markup” , dimana bahasa markup ini salah satunya adalah HTML.</p>
+					</details>
+				</figure>
+			</section>
+
+			<section>
+				<figure>
+					<img src="assets/img/js.png" height="100" width="100">
+					<figcaption>Javascript untuk pemula</figcaption>
+					<details>
+						<summary>
+							Info selengkapnya
+						</summary>
+						<p>JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Internet Explorer, Mozilla Firefox, Netscape dan Opera. Wikipedia</p>
+					</details>
+				</figure>
+			</section>
+		</article>
 	</main>
 
 	<aside>
@@ -71,7 +113,19 @@
 	</aside>
 
 	<footer>
+
+		<form>
+			<!-- http://html5doctor.com/html5-forms-input-types/ -->
+			<label for="nama_lengkap">Nama</label>
+			<input type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Your Name"><br>
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" placeholder="Your Email"><br>
+			<input type="submit" name="submit" value="kirim">
+
+		</form>
 		<p>&copy; 2018 Full Stack Dev</p>
+		
+
 	</footer>
 </body>
 </html>
