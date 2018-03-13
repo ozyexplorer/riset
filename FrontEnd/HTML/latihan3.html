@@ -7,10 +7,12 @@
 		body {
 			font-family: verdana, sans-serif;
 			font-size: 12px;
-			background-image: url(assets/img/chara.jpg);
+			background-image: url(assets/img/bg2.jpg);
 			background-repeat: no-repeat;
+			background-size: 100%;
 			background-attachment: fixed;
 		}
+
 
 		header, nav, main, aside, footer /*#header, #nav, #main-content, #sidebar-content, #footer*/ {
 			border: 1px solid gray;
@@ -18,22 +20,81 @@
 			padding: 5px;
 		}
 
+		header {
+			background-color: #33ccff;
+			text-align: center;
+		}
+
+		nav {
+			background-color: lightgreen;
+		}
+
 		main/*#main-content*/ {
 			float: left;
 			width: 60%;
+			background-color: white;
 		}
 
 		aside /*#sidebar-content*/ {
 			float: left;
 			width: 30%;
+			background-color: white;
 		}
 
 		footer /*#footer*/ {
-			clear: both;
+			clear: both;		
+			background-color: white;
 		}
 
-		header {
-			background-color: #33ccff;
+		h1 {
+			text-decoration: underline;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+
+		.menu:link {
+			color: black;
+			background: yellow;
+			font-weight: bold;
+		}
+
+		.menu:visited{
+			color: white;
+			background: red;
+		}
+
+		.menu:hover{
+			color: white;
+			background: black;
+		}
+
+		.menu:active{
+			color: white;
+			background: gray;
+		}
+
+		#text {
+			text-align: justify;
+			text-indent: 30px;
+			/*letter-spacing: 5px;*/
+			line-height: 20px;
+		}
+
+		ul li {
+			list-style-type: none;
+			/*https://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block*/
+			display: inline;
+		}
+
+		.menu {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+		}
+
+		h1 {
+			display: inline;
 		}
 	</style>
 </head>
@@ -46,9 +107,9 @@
 
 	<nav>
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Profil</a></li>
-			<li><a href="#">Kontak</a></li>
+			<li><a href="#" class="menu">Home</a></li>
+			<li><a href="#" class="menu">Profil</a></li>
+			<li><a href="#" class="menu">Kontak</a></li>
 		</ul>
 		<form>
 			<input type="search" name="search" placeholder="cari disini">
@@ -60,15 +121,12 @@
 		<article>
 
 			<h1>Daftar Pelajaran</h1>
-			<dialog open>
-				ini website tutorial ngoding
-			</dialog>
 
 			<section>
 				<figure>
 					<img src="assets/img/html.png" height="100" width="100">
 					<figcaption>HTML untuk pemula</figcaption>
-					<details open>
+					<details>
 						<summary>
 							Info selengkapnya
 						</summary>
@@ -92,7 +150,12 @@
 						<summary>
 							Info selengkapnya
 						</summary>
-						<p>Dalam bahasa bakunya, seperti di kutip dari wikipedia, CSS adalah “kumpulan kode yang digunakan untuk mendefenisikan desain dari bahasa markup” , dimana bahasa markup ini salah satunya adalah HTML.</p>
+						<p id="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			</p>
 					</details>
 				</figure>
 			</section>
@@ -120,16 +183,6 @@
 	</aside>
 
 	<footer>
-
-		<form>
-			<!-- http://html5doctor.com/html5-forms-input-types/ -->
-			<label for="nama_lengkap">Nama</label>
-			<input type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Your Name"><br>
-			<label for="email">Email</label>
-			<input type="email" name="email" id="email" placeholder="Your Email"><br>
-			<input type="submit" name="submit" value="kirim">
-
-		</form>
 		<p>&copy; 2018 Full Stack Dev</p>
 		
 
