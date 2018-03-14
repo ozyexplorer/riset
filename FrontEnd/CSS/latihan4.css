@@ -1,0 +1,50 @@
+body{
+	font-family: sans-serif;
+}
+
+nav {
+	background: gray;
+
+}
+
+ul li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.menu{
+	color: black;
+	font-weight: bold;
+	background: white;
+	display: block;
+	width: 60px;
+	height: 20px;
+	text-decoration: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	margin: 5px;		
+}
+
+/* saat biasa*/
+.menu:link {
+	background: white;
+}
+
+/*saat dikunjungi*/
+.menu:visited{
+	background: blue;
+	color: white;
+}
+
+/*saat kursor berada diatas*/
+.menu:hover{
+	background: green;
+}
+
+/*saat kursor mengklik*/
+.menu:active{
+	background: yellow;
+}
