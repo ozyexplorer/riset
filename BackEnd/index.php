@@ -1,3 +1,8 @@
+<?php
+session_start();
+if ( isset($_SESSION['username'])) {
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -104,3 +109,9 @@
 
 	</body>
 </html>
+<?php
+}else{
+	header('Location:login.php');
+	// echo "Login dulu gan";
+	// echo "<a href='login.php'></a>";
+}
